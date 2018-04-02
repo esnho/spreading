@@ -54,7 +54,7 @@ namespace Spreading
             float end = _center + (_width * 0.5f);
             for (int i = 0; i < size; i++)
             {
-                _spread[i] = Mathf.Lerp(start, end, (float)i / (float)size);
+                _spread[i] = Mathf.Lerp(start, end, (float)i / (float)(size-1));
             }
         }
     }
