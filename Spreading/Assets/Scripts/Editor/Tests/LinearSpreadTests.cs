@@ -9,21 +9,21 @@ public class LinearSpreadTests
 {
 
     [Test]
-    public void LinearSpreadCreation()
+    public void Creation()
     {
         LinearSpread lSpread = new LinearSpread(5, 1f, 0f);
         Assert.AreEqual(lSpread.GetType(), typeof(LinearSpread));
     }
 
     [Test]
-    public void LinearSpreadSize()
+    public void Size()
     {
         LinearSpread lSpread = new LinearSpread(5, 1f, 0f);
         Assert.AreEqual(5, lSpread.size);
     }
 
     [Test]
-    public void LinearSpreadIncreaseSize()
+    public void IncreaseSize()
     {
         int startSize = 5;
         int newSize = 8;
@@ -33,7 +33,7 @@ public class LinearSpreadTests
     }
 
     [Test]
-    public void LinearSpreadDiminishSize()
+    public void DiminishSize()
     {
         int startSize = 5;
         int newSize = 2;
@@ -43,25 +43,35 @@ public class LinearSpreadTests
     }
 
     [Test]
-    public void LinearSpreadMinValue()
+    public void MinValue()
     {
         LinearSpread lSpread = new LinearSpread(5, 1f, 0f);
         Assert.AreEqual(-0.5f, lSpread.value[0]);
     }
 
     [Test]
-    public void LinearSpreadMaxValue()
+    public void MaxValue()
     {
         LinearSpread lSpread = new LinearSpread(5, 1f, 0f);
         Assert.AreEqual(0.5f, lSpread.value[lSpread.size - 1]);
     }
 
     [Test]
-    public void LinearSpreadCenterValue()
+    public void CenterValue()
     {
         float centerVal = 1.5f;
         LinearSpread lSpread = new LinearSpread(5, 15f, centerVal);
         Assert.AreEqual(centerVal, lSpread.value[2]);
+    }
+
+    [Test]
+    public void ChangeCenterValue()
+    {
+        float centerVal = 1.5f;
+        float newCenterVal = 8.155f;
+        LinearSpread lSpread = new LinearSpread(5, 15f, centerVal);
+        lSpread.center = newCenterVal;
+        Assert.AreEqual(newCenterVal, lSpread.value[2]);
     }
 
     // A UnityTest behaves like a coroutine in PlayMode
