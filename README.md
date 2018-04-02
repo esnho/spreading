@@ -1,3 +1,3 @@
 # spreading
 
-Experimenting with the vvvv's spread concept in Unity3D.
+Experimenting with the VVVV's spread concept in Unity3D.
