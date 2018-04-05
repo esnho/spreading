@@ -36,15 +36,15 @@ namespace Spreading
 
             if (oldPosWidth != posWidth || oldPosCenter != posCenter)
             {
-                xPositionSpread.width = posWidth;
-                xPositionSpread.center = posCenter;
+                xPositionSpread.Width = posWidth;
+                xPositionSpread.Center = posCenter;
                 UpdatePositions();
                 SetRenderablesValues();
             }
 
             if (renderables == null || renderables.Length != instanceCount)
             {
-                xPositionSpread.size = instanceCount;
+                xPositionSpread.Size = instanceCount;
                 InitializePositions();
                 InitializeRenderables();
             }
@@ -59,7 +59,7 @@ namespace Spreading
         {
             for (int i = 0; i < instanceCount; i++)
             {
-                positions[i].x = xPositionSpread.value[i];
+                positions[i].x = xPositionSpread[i];
             }
             oldPosCenter = posCenter;
             oldPosWidth = posWidth;
