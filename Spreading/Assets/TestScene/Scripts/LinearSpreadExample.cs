@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Spreading
 {
     //[ExecuteInEditMode]
-    public class QuadInstance : MonoBehaviour
+    public class LinearSpreadExample : MonoBehaviour
     {
 
         public int instanceCount = 15;
