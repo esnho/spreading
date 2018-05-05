@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Spreading
 {
+    [Serializable]
     public class Spread
     {
-
+        [SerializeField]
         internal float[] _spread;
         public float this[int index]
         {

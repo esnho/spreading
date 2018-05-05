@@ -1,13 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
 namespace Spreading
 {
     //[CreateAssetMenu(fileName = "spread", menuName = "Spreads/Linear", order = 1)]
-    public class LinearSpread : Spread// : ScriptableObject
+    [Serializable]
+    public class LinearSpread : Spread
     {
-        //public float[] value { get { return _spread; } }
         [SerializeField]
         private float _width;
         public float Width
